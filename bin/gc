@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for a in $@ ; do
+    text="$text $a"
+
+done
+
+echo "${text:1}" | git commit --file -
+
