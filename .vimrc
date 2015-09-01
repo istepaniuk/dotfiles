@@ -54,12 +54,14 @@ let g:jedi#show_call_signatures = "2"
 let g:jedi#goto_command = "<leader>g"
 let g:jedi#rename_command = "<leader>r"
 
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
 " Set new grep command, which ignores SVN!
-" TODO: Add this to SVN
 set grepprg=/usr/bin/vimgrep\ $*\ /dev/null
 
 " Map <F5> to turn spelling on (VIM 7.0+)
