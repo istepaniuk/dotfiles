@@ -1,1 +1,0 @@
-/usr/share/vim/addons/after/syntax/python.vim
