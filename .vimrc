@@ -5,9 +5,6 @@
 " Source local settings
 source ~/.vimlocalrc
 
-" Remove if your term does not support 256 colors. Shame on you.
-set t_Co=256
-
 filetype off
 set nocompatible
 
@@ -64,7 +61,7 @@ filetype plugin indent on
 " Set new grep command, which ignores SVN!
 set grepprg=/usr/bin/vimgrep\ $*\ /dev/null
 
-" Map <F5> to turn spelling on (VIM 7.0+)
+" Map <F5> to turn spelling on
 map <F5> :setlocal spell! spelllang=en_us<cr>
 
 " Show nice info in ruler
@@ -110,8 +107,9 @@ call CmdAlias('Q', 'q')
 call CmdAlias('W', 'w')
 call CmdAlias('Wq', 'wq')
 
-vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
-vmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+nmap <leader>y "*y
+nmap <leader>p "*p
+nmap <leader>P "*P
 
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
