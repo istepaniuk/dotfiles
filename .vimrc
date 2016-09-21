@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
+Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='raven'
 set laststatus=2
 set noshowmode
